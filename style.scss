@@ -1,0 +1,48 @@
+* {
+   font-family:  'Arial';
+}
+
+html, body {
+   height: 100%;
+   width: 100%;
+}
+
+.navbar {
+   background-color: black;
+}
+
+.navbar-nav li{
+   padding-left: .5em;
+}
+
+.nav-link{
+   font-size: 1.25em;
+}
+
+.carousel-inner {
+   img {
+   width: 100%;
+   height:70vh;
+   transform: scaleX(1.5) scaleY(1);
+}
+
+   .carousel-caption {
+      text-align: left;
+      left: 5em;
+      right:25%;
+   
+   }
+
+   .display-3 {
+      // font-size: 7em;
+      text-shadow:  10px 8px 12px black;
+   }
+}
+
+.games-container {
+    background-image:  url("https://d9me64que7cqs.cloudfront.net/images/common/background-generic-landscape-short.31b43a7823e13c6383e5e613b04b5b58.jpg");
+    background-position: center;
+    background-repeat: none;
+    min-height: 55vh;
+    width: 100%;
+ }
