@@ -19,6 +19,10 @@ html, body {
    font-size: 1.25em;
 }
 
+.dropdown{
+   padding-top: 4px;
+}
+
 .carousel-inner {
    img {
    width: 100%;
@@ -27,6 +31,7 @@ html, body {
 }
 
    .carousel-caption {
+      display: position;
       text-align: left;
       left: 5em;
       right:25%;
@@ -40,9 +45,58 @@ html, body {
 }
 
 .games-container {
-    background-image:  url("https://d9me64que7cqs.cloudfront.net/images/common/background-generic-landscape-short.31b43a7823e13c6383e5e613b04b5b58.jpg");
+    background-image: url("https://d9me64que7cqs.cloudfront.net/images/common/background-generic-landscape-short.31b43a7823e13c6383e5e613b04b5b58.jpg");
     background-position: center;
     background-repeat: none;
     min-height: 55vh;
     width: 100%;
  }
+
+
+#slides .carousel-item.active {
+   animation: animate-carousel-left 1s normal forwards;
+   animation-duration: 6s;
+   animation-timing-function: linear;
+ }
+ 
+ @keyframes animate-carousel-left {
+   0%   {right:0px}
+   100%   {right:100px}
+ }
+
+ #slides2{
+   height: 60vh;
+    transition-duration: 1s;
+ }
+
+ .carousel-fade img {
+    height:60vh;
+    width:80%;
+ }
+ 
+ .carousel-fade .carousel-item {
+	opacity: 0;
+	transition-duration: .6s;
+   transition-property: opacity;
+
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+	opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+	opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+	transform: translateX(0);
+	transform: translate3d(0, 0, 0);
+}
